@@ -53,7 +53,7 @@ l1= Label(f1,text= "What is 2 + 2?", bg="black",fg= "white",justify= "center")
 l1.pack()
 a1= StringVar()
 r1= Radiobutton(f1, text= "1", variable= a1, value='1')
-r2= Radiobutton(f1, text= "3", variable= a1, value= "3")
+r2= Radiobutton(f1, text= "3", variable= a1, value= '3')
 r3= Radiobutton(f1, text= "4", variable= a1, value= '4')
 r1.pack()
 r2.pack()
@@ -81,6 +81,7 @@ a3=StringVar()
 def print_singh():
     global a3
     a3.set("singh")
+    answers.append("singh")
     stringvars.append(a3)
 def print_sidhu():
     global a3
@@ -100,7 +101,6 @@ b2= Button(f3, text= "sidhu", bg= "white", fg= "black", state= "normal", command
 b2.pack()
 b3= Button(f3, text= "gill", bg= "white", fg= "black", state= "normal", command= print_gill)
 b3.pack()
-answers.append("singh")
 f3.pack()
 
 
@@ -128,8 +128,21 @@ stringvars.append(a42)
 f4.pack()
 
 
-# f5= Frame(f,height= 600, width= 600, bg= "pink")
-# f5.pack()
+f5= Frame(f,height= 600, width= 600, bg= "pink")
+l5= Label(f5, text= "How old am I?",bg= "black",fg= "white",justify= "center")
+l5.pack()
+a5= StringVar()
+r4= Radiobutton(f5, text= "14", variable= a5, value='14')
+r5= Radiobutton(f5, text= "15", variable= a5, value= '15')
+r6= Radiobutton(f5, text= "16", variable= a5, value= '16')
+r4.pack()
+r5.pack()
+r6.pack()
+answers.append('16')
+stringvars.append(a5)
+print(answers)
+print(stringvars)
+f5.pack()
 # This submit button should be at the end of your test
 # It is meant to be clicked once the user has answered all questions
 submitButton = Button(root, text='Submit Answers',
@@ -143,3 +156,4 @@ results = Label(root, textvariable=result)
 results.pack()
 
 root.mainloop()
+
