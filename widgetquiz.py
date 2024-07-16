@@ -156,4 +156,3 @@ results = Label(root, textvariable=result)
 results.pack()
 
 root.mainloop()
-
